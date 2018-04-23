@@ -25,10 +25,6 @@ public class Sale_OrderServiceImpl implements Sale_OrderService {
      * @return
      */
     public List<Sale_Order> getOrder(Sale_Order_Line order) {
-   /*     List<Sale_Order> li=orDao.getOrder(order);
-        for (Sale_Order item:li) {
-            System.out.println("@@@@@@@@@@"+item.getLine());
-        }*/
         return orDao.getOrder(order);
     }
 

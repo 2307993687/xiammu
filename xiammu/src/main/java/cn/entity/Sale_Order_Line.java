@@ -58,14 +58,4 @@ public class Sale_Order_Line {
         this.product_Count = product_Count;
     }
 
-    @Override
-    public String toString() {
-        return "Sale_Order_Line{" +
-                "id=" + id +
-                ", order_id=" + order_id +
-                ", product_Name='" + product_Name + '\'' +
-                ", product_Price=" + product_Price +
-                ", product_Count=" + product_Count +
-                '}';
-    }
 }

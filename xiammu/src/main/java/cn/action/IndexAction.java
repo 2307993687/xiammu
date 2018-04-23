@@ -53,7 +53,6 @@ public class IndexAction extends ActionSupport {
             return "getOrder";
         }
         if(null !=line && line.getOrder_id()>0){//添加订单明细信息
-            System.out.println(line);
             if(ord.addLine(line)){
                 i=line.getOrder_id();
                 Sale_Order_Line oo=new Sale_Order_Line(i);
@@ -73,14 +72,8 @@ public class IndexAction extends ActionSupport {
             Sale_Order_Line oo=new Sale_Order_Line();
             oo.setId(byId);
             if(ord.removeLine(oo)){
-                System.out.println(itemId);
                 i=itemId;
                 ordList=ord.getOrder(null);
-                for (Sale_Order item:ordList) {
-                    System.out.println("@@@@@@@@@@"+item.getLine());
-                }
-           /*Sale_Order_Line o2=new Sale_Order_Line(i);
-                order=ord.getOrder(o2).get(0);*/
                 return "public";
             }
         }
