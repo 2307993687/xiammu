@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.entity">
+    <class name="Sale_Order_Line" table="SALE_ORDER_LINE" lazy="false">
+        <id name="id" column="ODL_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="order_id" column="ODL_ORDER_ID"/>
+        <property name="product_Name" column="ODL_PRODUCT_NAME"/>
+        <property name="product_Price" column="ODL_PRODUCT_PRICE"/>
+        <property name="product_Count" column="ODL_PRODUCT_COUNT"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+
+    <package name="web" extends="struts-default">
+        <global-results>
+            <result name="input">error.jsp</result>
+        </global-results>
+        <action name="*User" class="cn.action.IndexAction" method="{1}Index">
+            <result>index.jsp</result>
+            <result name="add">add.jsp</result>
+            <result name="getOrder">getOrder.jsp</result>
+            <result name="public" type="redirectAction">publicUser</result>
+            <!--
+             <result name="public" type="redirectAction">showUser</result>-->
+        </action>
+    </package>
+</struts>

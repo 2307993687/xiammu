@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.entity">
+    <class name="Cus_Customer" table="CUS_CUSTOMER">
+        <id name="cus_ID" column="CUS_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="cus_Name" column="CUS_NAME"/>
+        <property name="cus_Addr" column="CUS_ADDR"/>
+    </class>
+</hibernate-mapping>

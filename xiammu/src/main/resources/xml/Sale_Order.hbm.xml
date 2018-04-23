@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.entity">
+    <class name="Sale_Order" table="SALE_ORDER">
+        <id name="id" column="ODR_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="customer_ID" column="ODR_CUSTOMER_ID"/>
+        <property name="customer_Name" column="ODR_CUSTOMER_NAME"/>
+        <property name="deliver_Addr" column="ODR_DELIVER_ADDR"/>
+        <property name="deliver_Date" column="ODR_ORDER_DATE"/>
+        <property name="order_Date" column="ODR_DELIVER_DATE"/>
+        <property name="status" column="ODR_STATUS"/>
+        
+        <set name="line" cascade="delete" inverse="true" lazy="false">
+            <key column="ODL_ORDER_ID"></key>
+            <one-to-many class="Sale_Order_Line" ></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
